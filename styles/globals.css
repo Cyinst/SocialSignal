@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.border-gradient {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(162deg, #121536, #0b0d21),
+    linear-gradient(20deg, transparent, transparent, #8f41e9);
+}
+
+.border-gradient-2 {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(0, #09091a, #09091a),
+    linear-gradient(20deg, transparent, transparent, #8f41e9);
+}
+
+
+.border-gradient-3 {
+  border: 2px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(0, #09091a, #09091a),
+    linear-gradient(50deg, transparent, transparent, #8f41e9);
+}

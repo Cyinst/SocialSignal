@@ -1,0 +1,25 @@
+<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8">
+<g filter="url(#filter0_f_44_22821)">
+<circle cx="21" cy="21" r="16.5" stroke="url(#paint0_linear_44_22821)" style="mix-blend-mode:overlay"/>
+</g>
+<circle cx="21" cy="21" r="13.5" fill="#641DAC"/>
+<circle cx="21" cy="21" r="13.5" stroke="url(#paint1_linear_44_22821)" style="mix-blend-mode:overlay"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M32 21C32 27.0751 27.0751 32 21 32C14.9249 32 10 27.0751 10 21C10 14.9249 14.9249 10 21 10C27.0751 10 32 14.9249 32 21ZM25.2639 15.4437C26.0727 15.1327 26.8673 15.9273 26.5563 16.7361L24.1475 22.9988C23.9444 23.527 23.527 23.9444 22.9988 24.1475L16.7361 26.5563C15.9273 26.8673 15.1327 26.0727 15.4437 25.2639L17.8525 19.0012C18.0556 18.473 18.473 18.0556 19.0012 17.8525L25.2639 15.4437ZM21 23C22.1046 23 23 22.1046 23 21C23 19.8954 22.1046 19 21 19C19.8954 19 19 19.8954 19 21C19 22.1046 19.8954 23 21 23Z" fill="white" style="mix-blend-mode:overlay"/>
+</g>
+<defs>
+<filter id="filter0_f_44_22821" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_44_22821"/>
+</filter>
+<linearGradient id="paint0_linear_44_22821" x1="5.8" y1="8.6" x2="39" y2="34.2" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C322FF"/>
+<stop offset="1" stop-color="#00BAE1"/>
+</linearGradient>
+<linearGradient id="paint1_linear_44_22821" x1="7.7" y1="10.15" x2="36.75" y2="32.55" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E8A9FF"/>
+<stop offset="1" stop-color="#53E1FF"/>
+</linearGradient>
+</defs>
+</svg>
