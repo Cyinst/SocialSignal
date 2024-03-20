@@ -16,17 +16,17 @@ const g1Info = {
   groupName: "g1",
   groupId: 0,
   members: 2,
-  kol: "k1",
-  token: 1000,
-  topic: "#GameFi",
+  KOL: "k1",
+  token: "1000",
+  topic: ["#GameFi"],
 }
 const g2Info = {
   groupName: "g2",
   groupId: 1,
   members: 20,
-  kol: "k2",
-  token: 2000,
-  topic: "#SocialFi",
+  KOL: "k2",
+  token: "2000",
+  topic: ["#SocialFi"],
 }
 const groupInfo = [g1Info, g2Info]
 const columns = [
