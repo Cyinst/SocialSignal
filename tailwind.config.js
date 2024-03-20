@@ -1,4 +1,4 @@
-import { nextui } from "@nextui-org/theme";
+import { nextui } from "@nextui-org/theme"
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,6 +9,7 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: { serif: ["Georgia", "ui-serif"] },
     extend: {
       maxWidth: {
         "8xl": "90rem",
@@ -17,10 +18,10 @@ module.exports = {
         peace: ["var(--font-peace)"],
       },
       animation: {
-        'r1': 'r1 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+        r1: "r1 3s cubic-bezier(0, 0, 0.2, 1) infinite",
       },
       keyframes: {
-        "r1": {
+        r1: {
           "0%": {
             transform: `rotate(0deg)`,
           },
@@ -36,4 +37,4 @@ module.exports = {
   },
   darkMode: "class",
   plugins: [nextui({ dark: true, defaultTheme: "dark" })],
-};
+}

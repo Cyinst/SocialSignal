@@ -105,10 +105,10 @@ export const Navbar = () => {
       <NavbarContent className="hidden sm:flex" justify="center">
         <NavbarItem className="hidden md:flex">
           <Button
-            isExternal
+            // isExternal
             as={Link}
             className="font-normal rounded-full border border-white/20"
-            href={`/group`}
+            href={`/groups`}
             variant="flat"
             style={{
               background:

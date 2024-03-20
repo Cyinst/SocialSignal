@@ -9,6 +9,8 @@ import clsx from "clsx";
 import { motion } from "framer-motion";
 import NextLink from "next/link"
 export default function Home() {
+
+  // console.log(connectBrowserExtensionWallet())
   return (
     <section className="flex flex-col items-center justify-center">
       <div className="w-full relative overflow-hidden">
