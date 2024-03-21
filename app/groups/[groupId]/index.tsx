@@ -2,9 +2,10 @@
 import React from "react"
 import Daskboard from "./components/Daskboard"
 import GroupInfo from "./components/GroupInfo"
-import { SwapWidget } from "@uniswap/widgets"
 
-const Home = () => {
+const Home: React.FC<{ params: { groupId: string } }> = ({
+  params: { groupId },
+}) => {
   return (
     <div className="mt-16 mx-auto">
       <div className="mb-8">
