@@ -1,13 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  distDir: "dist",
   images: { unoptimized: true },
-  webpack: config => {
-    config.resolve.fallback = { fs: false, net: false, tls: false };
-    config.externals.push('pino-pretty', 'lokijs', 'encoding');
-    return config;
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false, net: false, tls: false }
+    config.externals.push("pino-pretty", "lokijs", "encoding")
+    return config
   },
-};
+  generateBuildId: async () => {
+    // You can, for example, get the latest git commit hash here
+    return "build1"
+  },
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
