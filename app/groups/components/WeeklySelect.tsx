@@ -44,7 +44,7 @@ const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
             </div>
             <div className="flex justify-between items-cetner ">
               <div className="flex items-center">
-                <Avatar />
+                <Avatar src="/groupsNavigationAvatar.png" />
                 <div className="mx-2">@{data.kolName}</div>
               </div>
               <div className="flex items-center mr-2">
@@ -94,7 +94,7 @@ const groupData: GroupCardDataType[] = Array(6)
 const WeeklySelect: React.FC = () => {
   return (
     <div>
-      <div className="font-peace text-[40px] leading-normal drop-shadow-[0px_4px_8px_#b133ff] flex justify-center">
+      <div className="font-peace text-[40px] leading-normal drop-shadow-[0px_4px_8px_#b133ff] flex justify-center my-16">
         Weekly Select
       </div>
       <div className="grid grid-cols-3 grid-flow-row gap-5">

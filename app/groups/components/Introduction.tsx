@@ -2,7 +2,7 @@
 import React from "react"
 import { Link } from "@nextui-org/link"
 import { motion } from "framer-motion"
-import { Button } from "@nextui-org/react"
+import { Button, Image } from "@nextui-org/react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { EffectCoverflow } from "swiper/modules"
 import "swiper/css"
@@ -12,7 +12,7 @@ const Introduction: React.FC = () => {
       <div className="w-[90%] md:w-full max-w-full md:max-w-6xl mx-auto z-10">
         <div className="flex items-center justify-between gap-5">
           <motion.div
-            className="w-[60%]"
+            className="w-[30%]"
             initial={{
               opacity: 0,
               x: -100,
@@ -40,33 +40,29 @@ const Introduction: React.FC = () => {
           </motion.div>
 
           <Swiper
-            className="h-full"
             effect="coverflow"
+            autoHeight
+            height={600}
             modules={[EffectCoverflow]}
             coverflowEffect={{
               rotate: 20,
-              depth: 100,
+              depth: 60,
               modifier: 1.5,
               scale: 1,
-              stretch: 0,
+              stretch: 10,
               slideShadows: true,
             }}
             spaceBetween={10}
             slidesPerView={3}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>
-              <div className=" bg-[red] h-[200px] w-[200px]"> slide 1</div>
+              <Image src="/groups_1.png" alt="" width={500}></Image>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-[green] h-[200px] w-[200px]"> slide 2</div>
+              <Image src="/groups_2.png" alt="" width={500}></Image>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="bg-[yellow] h-[200px] w-[200px]"> slide 3</div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="bg-[purple] h-[200px] w-[200px]"> slide 4</div>
+              <Image src="/groups_3.png" alt="" width={500}></Image>
             </SwiperSlide>
           </Swiper>
         </div>

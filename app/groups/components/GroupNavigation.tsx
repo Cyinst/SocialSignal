@@ -20,11 +20,11 @@ interface GroupCardDataType {
 
 const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
   return (
-    <Card className="bg-[rgba(24,31,46,0.6)] px-6">
+    <Card className="bg-[rgba(24,31,46,0.6)] px-6 ">
       <CardBody>
         <div className="flex gap-5">
           <div className="flex justify-center items-center m-4">
-            <Avatar size="lg" />
+            <Avatar size="lg" src="/groupAvatar.png"/>
           </div>
           <div className="flex flex-col justify-between">
             <div className="font-bold text-[16px] leading-normal">
@@ -78,11 +78,11 @@ const tagLabel = ["Games", "News"]
 const GroupNavigation = () => {
   const [activeGroupIndex, setActiveGroupIndex] = useState(0)
   return (
-    <div className="">
+    <div className="my-16">
       <div className="font-peace text-[40px] leading-normal drop-shadow-[0px_4px_8px_#b133ff] flex justify-center">
         Group Naviagton
       </div>
-      <div className="flex gap-5 items-center">
+      <div className="flex gap-5 items-center my-8">
         {groupLabel.map((label, index) => (
           <div
             key={label}
@@ -96,7 +96,7 @@ const GroupNavigation = () => {
           </div>
         ))}
       </div>
-      <div className="flex gap-5 items-center">
+      <div className="flex gap-5 items-center my-4">
         {tagLabel.map((label, index) => (
           <div key={label} className=" ring-1 ring-white rounded-md px-2 py-1">
             {label}
