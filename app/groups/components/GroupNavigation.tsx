@@ -20,7 +20,7 @@ interface GroupCardDataType {
 
 const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
   return (
-    <Card className="bg-[rgba(24,31,46,0.6)] px-6 ">
+    <Card className="bg-[rgba(24,31,46,0.6)] px-6 m-2">
       <CardBody>
         <div className="flex gap-5">
           <div className="flex justify-center items-center m-4">
