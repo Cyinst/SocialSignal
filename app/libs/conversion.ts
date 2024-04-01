@@ -9,7 +9,10 @@ export function fromReadableAmount(
   return ethers.utils.parseUnits(amount.toString(), decimals)
 }
 
-export function toReadableAmount(rawAmount: number, decimals: number): string {
+export function toReadableAmount(
+  rawAmount: number | ethers.BigNumber,
+  decimals: number
+): string {
   return ethers.utils
     .formatUnits(rawAmount, decimals)
     .slice(0, READABLE_FORM_LEN)

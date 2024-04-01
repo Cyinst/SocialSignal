@@ -1,16 +1,17 @@
-"use client";
-import { Link } from "@nextui-org/link";
-import Image from "next/image";
-import { Button } from "@nextui-org/button";
-import { useMemo, useState } from "react";
-import { Image as NUImage } from "@nextui-org/image";
-import Marquee from "react-fast-marquee";
-import clsx from "clsx";
-import { motion } from "framer-motion";
+"use client"
+import { Link } from "@nextui-org/link"
+import Image from "next/image"
+import { Button } from "@nextui-org/button"
+import { useMemo, useState } from "react"
+import { Image as NUImage } from "@nextui-org/image"
+import Marquee from "react-fast-marquee"
+import { Toaster } from "react-hot-toast"
+import clsx from "clsx"
+import { motion } from "framer-motion"
 import NextLink from "next/link"
 export default function Home() {
-
   // console.log(connectBrowserExtensionWallet())
+
   return (
     <section className="flex flex-col items-center justify-center">
       <div className="w-full relative overflow-hidden">
@@ -47,11 +48,9 @@ export default function Home() {
               and value growth.
             </div>
             <Button
-              isExternal
               as={Link}
               className="font-normal mt-10 rounded-full border border-white/20 flex  text-xl max-w-[260px] h-[60px] flex-col justify-center items-center mx-auto md:mx-0"
-              href={"https://t.me/test_signal_swap_bot"}
-              target="_blank"
+              href="/groups"
               variant="flat"
               style={{
                 background:
@@ -86,7 +85,7 @@ export default function Home() {
       <S4 />
       <S5 />
     </section>
-  );
+  )
 }
 
 const s2List = [
@@ -115,11 +114,11 @@ const s2List = [
     image: "s-2-3.png",
     video: false,
   },
-];
+]
 
 const S2 = () => {
-  const [active, setActive] = useState(0);
-  const activeData = useMemo(() => s2List[active], [active]);
+  const [active, setActive] = useState(0)
+  const activeData = useMemo(() => s2List[active], [active])
 
   return (
     <div className=" min-h-screen py-8 flex flex-col justify-center items-center">
@@ -151,7 +150,7 @@ const S2 = () => {
             >
               {item.title}
             </Button>
-          );
+          )
         })}
       </div>
 
@@ -200,8 +199,8 @@ const S2 = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
 const S3 = () => {
   const list = [
@@ -234,7 +233,7 @@ const S3 = () => {
       ],
       class: "md:mt-[0px] mt-10",
     },
-  ];
+  ]
 
   return (
     <div className=" min-h-screen mt-10 md:pt-[50px] mb-24 flex flex-col justify-center items-center relative">
@@ -290,7 +289,7 @@ const S3 = () => {
                         >
                           {li}
                         </li>
-                      );
+                      )
                     })}
                   </div>
                 </div>
@@ -306,21 +305,21 @@ const S3 = () => {
                 </div>
               </div>
             </motion.div>
-          );
+          )
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
 const S4 = () => {
-  const titleList = ["hot topic", "private group"];
-  const [active, setActive] = useState(titleList[0]);
+  const titleList = ["hot topic", "private group"]
+  const [active, setActive] = useState(titleList[0])
 
   return (
     <div className="mt-16 md:mt-[150px] pb-[150px] flex flex-col justify-start items-center w-full px-4 md:px-0 relative">
       <div className=" max-w-6xl w-full">
-      <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center">
           <div className="flex gap-12  justify-center md:justify-start items-center">
             {titleList.map((item) => (
               <div
@@ -335,8 +334,6 @@ const S4 = () => {
               </div>
             ))}
           </div>
-
-          <NextLink href="/group" > view all </NextLink>
         </div>
         <Image
           className=" absolute bottom-[35%] -left-1/2 md:-left-[10%] w-full md:w-[500px]"
@@ -408,7 +405,7 @@ const S4 = () => {
                     <span>#GameFi</span>
                   </div>
                 </motion.li>
-              );
+              )
             })}
           </ul>
         </div>
@@ -480,14 +477,14 @@ const S4 = () => {
                     1,000
                   </div>
                 </motion.li>
-              );
+              )
             })}
           </ul>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const s5List = [
   {
@@ -520,7 +517,7 @@ const s5List = [
     name: "Wade Warren",
     id: "@Ralph Edwards",
   },
-];
+]
 const S5 = () => {
   return (
     <div className="flex flex-col justify-start items-center w-full">
@@ -559,10 +556,10 @@ const S5 = () => {
                   </div>
                 </div>
               </li>
-            );
+            )
           })}
         </ul>
       </Marquee>
     </div>
-  );
-};
+  )
+}

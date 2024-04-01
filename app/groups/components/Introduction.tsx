@@ -19,18 +19,16 @@ const Introduction: React.FC = () => {
             }}
             whileInView={{ opacity: 1, x: 0 }}
           >
-            <div className="text-3xl md:text-7xl font-bold md:leading-[96px]">
+            <div className="text-3xl md:text-6xl font-bold md:leading-[72px]">
               Unlocking The New SocialFi Frontier
             </div>
-            <div className="text-xl md:text-4xl">
+            <div className="text-xl md:text-3xl">
               Preferred Private Social Keys To Web3 Powered By SFTS
             </div>
             <Button
               isExternal
               as={Link}
               className="font-normal mt-10 rounded-full border border-white/20 flex  text-xl max-w-[260px] h-[60px] flex-col justify-center items-center mx-auto md:mx-0"
-              href={"https://t.me/test_signal_swap_bot"}
-              target="_blank"
               variant="flat"
               style={{
                 background:
@@ -42,6 +40,7 @@ const Introduction: React.FC = () => {
           </motion.div>
 
           <Swiper
+            className="h-full"
             effect="coverflow"
             modules={[EffectCoverflow]}
             coverflowEffect={{

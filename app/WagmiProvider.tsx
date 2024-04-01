@@ -34,19 +34,6 @@ import {
   goerli,
   localhost,
 } from "wagmi/chains"
-// const { chains, publicClient, webSocketPublicClient } = configureChains(
-//   [
-//     mainnet,
-//     polygon,
-//     optimism,
-//     arbitrum,
-//     base,
-//     zora,
-//     localhost,
-//     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [sepolia] : []),
-//   ],
-//   [publicProvider()]
-// )
 
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID || ""
 const appName = "Social Signal"
@@ -96,12 +83,13 @@ const wagmiConfig = createConfig({
     mainnet,
     polygon,
     goerli,
-    optimism,
-    arbitrum,
-    base,
-    zora,
-    localhost,
-    ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [sepolia] : []),
+    sepolia,
+    // optimism,
+    // arbitrum,
+    // base,
+    // zora,
+    // localhost,
+    // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === "true" ? [sepolia] : []),
   ],
   transports: {
     [mainnet.id]: http(),

@@ -87,20 +87,22 @@ export const Navbar = () => {
           ))}
         </ul>
       </NavbarContent>
-      <NavbarContent className="basis-full hidden md:flex items-center" justify="end">
-        <Input
-          classNames={{
-            base: "max-w-full sm:max-w-[10rem] h-10",
-            mainWrapper: "h-full",
-            input: "text-small",
-            inputWrapper:
-              "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+      <NavbarContent
+        className="basis-full hidden md:flex items-center"
+        justify="end"
+      >
+        <Button
+          as={Link}
+          className="font-normal rounded-full border border-white/20"
+          href={`/groups/createGroup`}
+          variant="flat"
+          style={{
+            background:
+              "radial-gradient(1604.13% 347.57% at 50% 50%, #6119AB 0%, #BF97BF 90%)",
           }}
-          placeholder="Type to search..."
-          size="md"
-          startContent={<SearchIcon size={18} />}
-          type="search"
-        />
+        >
+          create Group
+        </Button>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex" justify="center">
         <NavbarItem className="hidden md:flex">

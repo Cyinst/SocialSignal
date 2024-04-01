@@ -5,6 +5,7 @@ import { fontPeace, fontSans } from "@/config/fonts"
 import { Providers } from "./providers"
 import { Navbar } from "@/components/navbar"
 import clsx from "clsx"
+import { Toaster } from "react-hot-toast"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function RootLayout({
           fontPeace.variable
         )}
       >
+        <Toaster />
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />

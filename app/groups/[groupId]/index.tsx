@@ -2,6 +2,7 @@
 import React from "react"
 import Daskboard from "./components/Daskboard"
 import GroupInfo from "./components/GroupInfo"
+import SwapWidget from "./components/SwapWidget"
 
 const Home: React.FC<{ params: { groupId: string } }> = ({
   params: { groupId },
@@ -15,7 +16,7 @@ const Home: React.FC<{ params: { groupId: string } }> = ({
         <Daskboard />
       </div>
       <div className="flex justify-center items-center h-32 w-[80%] mx-auto bg-slate-800">
-        should be a swap widget
+        <SwapWidget />
       </div>
     </div>
   )
