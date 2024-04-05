@@ -1,5 +1,6 @@
 import React from "react"
 import { Button, Text, Img } from "@/components"
+import Link from "next/link"
 
 interface Props {
   className?: string
@@ -62,14 +63,16 @@ export default function NavigationColumnjoin({
           </div>
         </div>
       </div>
-      <Button
-        size="xl"
-        variant="fill"
-        shape="round"
-        className="w-full sm:px-5 !text-white-A700 capitalize font-bold border-white-A700_66 border border-solid !rounded-[7px]"
-      >
-        {join}
-      </Button>
+      <Link href="/groups/1">
+        <Button
+          size="xl"
+          variant="fill"
+          shape="round"
+          className="w-full sm:px-5 !text-white-A700 capitalize font-bold border-white-A700_66 border border-solid !rounded-[7px]"
+        >
+          {join}
+        </Button>
+      </Link>
     </div>
   )
 }

@@ -89,7 +89,7 @@ const GroupNavigation = () => {
         className="tracking-[0.60px] !font-alfaslabone text-shadow-ts"
       >
         <span className="leading-normal drop-shadow-[0px_4px_8px_#b133ff]  my-16font-peacesans font-peace text-[40px] my-16">
-          Group {"  "}
+          Group 
         </span>
           <span className="leading-normal drop-shadow-[0px_4px_8px_#b133ff]  my-16font-peacesans font-peace text-[40px] my-16">Navigation</span>
       </Text>
