@@ -1,70 +1,67 @@
 "use client"
 import React from "react"
-import { Link } from "@nextui-org/link"
-import { motion } from "framer-motion"
-import { Button, Image } from "@nextui-org/react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow } from "swiper/modules"
-import "swiper/css"
+import { Image } from "@nextui-org/react"
+import { Heading } from "@/components/Heading"
+import { Button } from "@/components/Button"
+import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
+import { Carousel } from "react-responsive-carousel"
 const Introduction: React.FC = () => {
   return (
-    <div className="w-full relative overflow-hidden">
-      <div className="w-[90%] md:w-full max-w-full md:max-w-6xl mx-auto z-10">
-        <div className="flex items-center justify-between gap-5">
-          <motion.div
-            className="w-[30%]"
-            initial={{
-              opacity: 0,
-              x: -100,
-            }}
-            whileInView={{ opacity: 1, x: 0 }}
-          >
-            <div className="text-3xl md:text-6xl font-bold md:leading-[72px]">
-              Unlocking The New SocialFi Frontier
+    <div className="w-full bg-gray-900_01">
+      <div className="flex flex-col items-start">
+        <div className="self-stretch py-5 bg-gray-800_01">
+          <div className="flex flex-col items-center mb-[65px]">
+            <div className="flex items-center w-full gap-4 mt-[105px] mx-auto md:p-5 max-w-[1226px]">
+              <div className="flex flex-col items-start w-[48%] gap-10">
+                <div className="flex flex-col self-stretch items-start gap-4">
+                  <div className="flex w-[94%] md:w-full pt-[13px]">
+                    <Heading size="5xl" as="h1" className="leading-[72px]">
+                      Unlocking The New SocialFi Frontier{" "}
+                    </Heading>
+                  </div>
+                  <div className="flex self-center pr-[7px] py-[7px]">
+                    <Heading
+                      size="2xl"
+                      as="h2"
+                      className="self-end text-[#94A3B8] !font-bold"
+                    >
+                      Preferred Private Social Keys to Web3 Powered By SFTs{" "}
+                    </Heading>
+                  </div>
+                </div>
+                <Button
+                  color="white_A700_33"
+                  size="7xl"
+                  rightIcon={
+                    <Image
+                      src="/images/Image_frame_1000002923.svg"
+                      alt="Frame 1000002923"
+                    />
+                  }
+                  className="flex justify-center items-center gap-[11px] min-w-[260px] rounded-[30px] bg-[#6119AB]"
+                >
+                  Follow us
+                </Button>
+              </div>
+              <div className=" flex-1 relative ">
+                <div className="flex items-center w-full h-full  sm:relative">
+                  <div className="w-full h-full justify-center items-center">
+                    <Carousel className="h-full">
+                      <div className="">
+                        <Image src={`/groups_1.png`} alt=""></Image>
+                      </div>
+                      <div className="">
+                        <Image src={`/groups_2.png`} alt=""></Image>
+                      </div>
+                      <div className=" h-full w-full">
+                        <Image src={`/groups_3.png`} className="h-full w-full" alt="" removeWrapper></Image>
+                      </div>
+                    </Carousel>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="text-xl md:text-3xl">
-              Preferred Private Social Keys To Web3 Powered By SFTS
-            </div>
-            <Button
-              isExternal
-              as={Link}
-              className="font-normal mt-10 rounded-full border border-white/20 flex  text-xl max-w-[260px] h-[60px] flex-col justify-center items-center mx-auto md:mx-0"
-              variant="flat"
-              style={{
-                background:
-                  "radial-gradient(1604.13% 347.57% at 50% 50%, #6119AB 0%, #BF97BF 90%)",
-              }}
-            >
-              Start navigation
-            </Button>
-          </motion.div>
-
-          <Swiper
-            effect="coverflow"
-            autoHeight
-            height={600}
-            modules={[EffectCoverflow]}
-            coverflowEffect={{
-              rotate: 20,
-              depth: 60,
-              modifier: 1.5,
-              scale: 1,
-              stretch: 10,
-              slideShadows: true,
-            }}
-            spaceBetween={10}
-            slidesPerView={3}
-          >
-            <SwiperSlide>
-              <Image src="/groups_1.png" alt="" width={500}></Image>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src="/groups_2.png" alt="" width={500}></Image>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image src="/groups_3.png" alt="" width={500}></Image>
-            </SwiperSlide>
-          </Swiper>
+          </div>
         </div>
       </div>
     </div>

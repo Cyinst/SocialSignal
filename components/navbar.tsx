@@ -46,9 +46,9 @@ export const Navbar = () => {
     <NextUINavbar
       className={clsx(
         !scroll?.top
-          ? "bg-transparent backdrop-filter-none"
-          : "bg-[#0B0D21]/90  backdrop-filter-none z-50",
-        "fixed"
+          ? "bg-transparent backdrop-filter-none overflow-clip z-[100]"
+          : "bg-[#0B0D21]/90  backdrop-filter-none z-[100]",
+        "fixed bg-[#0B0D21]/90"
       )}
       classNames={{
         wrapper: "max-w-8xl px-4 md:px-20 h-[64px] md:h-[75px]",

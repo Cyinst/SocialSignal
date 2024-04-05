@@ -8,7 +8,11 @@ import {
   CardFooter,
   Chip,
 } from "@nextui-org/react"
+import { Text } from "@/components"
 import { motion } from "framer-motion"
+import NavigationColumndbbb from "./NavigationColumndbbb"
+import NavigationColumnjoin from "./NavigationColumnjoin"
+import NavigationFilter from "./NavigationFilter"
 interface GroupCardDataType {
   groupId: string | number
   avatarUrl: string
@@ -24,7 +28,7 @@ const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
       <CardBody>
         <div className="flex gap-5">
           <div className="flex justify-center items-center m-4">
-            <Avatar size="lg" src="/groupAvatar.png"/>
+            <Avatar size="lg" src="/groupAvatar.png" />
           </div>
           <div className="flex flex-col justify-between">
             <div className="font-bold text-[16px] leading-normal">
@@ -78,35 +82,31 @@ const tagLabel = ["Games", "News"]
 const GroupNavigation = () => {
   const [activeGroupIndex, setActiveGroupIndex] = useState(0)
   return (
-    <div className="my-16">
-      <div className="font-peace text-[40px] leading-normal drop-shadow-[0px_4px_8px_#b133ff] flex justify-center">
-        Group Naviagton
-      </div>
-      <div className="flex gap-5 items-center my-8">
-        {groupLabel.map((label, index) => (
-          <div
-            key={label}
-            className={
-              activeGroupIndex === index
-                ? "text-[24px] font-semibold"
-                : "text-[20px]"
-            }
-          >
-            {label}
+    <div className="flex flex-col items-center w-full gap-[47px] mx-auto max-w-[1278px]">
+      <Text
+        size="8xl"
+        as="p"
+        className="tracking-[0.60px] !font-alfaslabone text-shadow-ts"
+      >
+        <span className="leading-normal drop-shadow-[0px_4px_8px_#b133ff]  my-16font-peacesans font-peace text-[40px] my-16">
+          Group {"  "}
+        </span>
+          <span className="leading-normal drop-shadow-[0px_4px_8px_#b133ff]  my-16font-peacesans font-peace text-[40px] my-16">Navigation</span>
+      </Text>
+      <div className="flex flex-col self-stretch gap-[30px]">
+        <NavigationFilter className="flex flex-col w-[14%] md:w-full gap-[11px]" />
+        <div>
+          <div className="justify-center gap-7 grid-cols-[repeat(auto-fill,_minmax(266px_,_1fr))] grid">
+            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+            <NavigationColumndbbb className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+            <NavigationColumndbbb className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+            <NavigationColumndbbb className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
           </div>
-        ))}
-      </div>
-      <div className="flex gap-5 items-center my-4">
-        {tagLabel.map((label, index) => (
-          <div key={label} className=" ring-1 ring-white rounded-md px-2 py-1">
-            {label}
-          </div>
-        ))}
-      </div>
-      <div className="grid grid-cols-4 grid-flow-row gap-5">
-        {groupCardData.map((data) => (
-          <GroupCard key={data.groupId} data={data} />
-        ))}
+        </div>
       </div>
     </div>
   )

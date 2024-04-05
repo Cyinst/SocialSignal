@@ -6,7 +6,7 @@ import { Providers } from "./providers"
 import { Navbar } from "@/components/navbar"
 import clsx from "clsx"
 import { Toaster } from "react-hot-toast"
-import Footer from "@/components/footer"
+import Footer from "@/components/footer.backup"
 
 export const metadata: Metadata = {
   title: {
@@ -31,11 +31,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="bg-[#0B0D21]">
       <head />
       <body
-        className={clsx(
+       className={clsx(
           "min-h-screen font-sans antialiased",
           fontSans.variable,
           fontPeace.variable
-        )}
+        )} 
       >
         <Toaster />
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>

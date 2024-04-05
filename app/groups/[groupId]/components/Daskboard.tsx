@@ -7,7 +7,7 @@ const Daskboard = () => {
         Dashboard
       </div>
       <div className="flex flex-col justify-around items-center w-full text-white rounded-md stroke-1 stroke-white p-8 gap-4 m-2">
-        <div className="flex justify-between items-stretch gap-8 w-full h-32">
+        <div className="flex justify-between items-stretch gap-8 w-full ">
           <div className="bg-[#131829] flex-1 rounded-lg p-8">
             <div className="font-semibold text-[16px] leading-normal">
               SS Token
@@ -45,7 +45,7 @@ const Daskboard = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-stretch gap-8 w-full h-32">
+        <div className="flex justify-between items-stretch gap-8 w-full">
           <div className="flex flex-col items-start bg-[#131829] flex-1 rounded-lg p-8">
             <div className="font-semibold text-[16px] leading-normal">
               KSFT Circulate Market Cap

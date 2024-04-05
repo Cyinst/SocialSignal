@@ -25,17 +25,15 @@ const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
   return (
     <Card
       style={{
-        width: "401px",
-        height: "230px",
         background:
           "linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(179.26deg, rgba(78, 49, 91, 0.1) -1.53%, rgba(49, 58, 91, 0.5) 65.9%, rgba(49, 58, 91, 0) 101.48%)",
         boxShadow: "0px 4px 4px rgba(180, 41, 154, 0.3)",
       }}
-      className="backdrop-blur-[20px] rounded-2xl "
+      className="backdrop-blur-[20px] rounded-2xl px-2 "
     >
       <CardBody>
-        <div className="flex justify-between ">
-          <div className="flex flex-col items-start">
+        <div className="flex justify-between items-center ">
+          <div className="flex flex-col items-start flex-1">
             <div className="my-2">{data.groupName}</div>
             <div className="mb-6">
               {data.topics.map((topic) => (
@@ -56,19 +54,19 @@ const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center items-center w-[30%] ring-2 ring-[#2E2E2E] rounded-md">
+          <div className="flex w-[30%] p-6 relative pt-[30%] overflow-hidden  justify-center items-center ring-2 ring-[#2E2E2E] rounded-md">
             <Image
               removeWrapper
               src={data.coinUrl}
               alt=""
-              className="w-[70%]"
+              className="w-full h-auto absolute top-0 left-0"
               radius="md"
             ></Image>
           </div>
         </div>
       </CardBody>
       <CardFooter>
-        <div className="flex justify-between bg-[#5D54FD] rounded-md w-full">
+        <div className="flex justify-between bg-[#5D54FD] rounded-md w-full px-4">
           <div className="">{data.description}</div>
           <motion.img src="/backQuote.svg"></motion.img>
         </div>
@@ -81,7 +79,7 @@ const groupData: GroupCardDataType[] = Array(6)
   .fill(0)
   .map((_, idx) => ({
     groupId: idx,
-    groupName: "SS",
+    groupName: "Social Signal",
     avatarUrl: "",
     coinUrl: "/logo-1.png",
     kolName: "zhangsan",
@@ -97,7 +95,7 @@ const WeeklySelect: React.FC = () => {
       <div className="font-peace text-[40px] leading-normal drop-shadow-[0px_4px_8px_#b133ff] flex justify-center my-16">
         Weekly Select
       </div>
-      <div className="grid grid-cols-3 grid-flow-row gap-5">
+      <div className="grid grid-cols-3 grid-flow-row gap-8">
         {groupData.map((data) => (
           <GroupCard key={data.groupId} data={data} />
         ))}

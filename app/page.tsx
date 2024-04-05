@@ -82,7 +82,7 @@ export default function Home() {
           background: `linear-gradient(90deg, rgba(249, 248, 247, 0) 0%, #641DAC 9.09%, rgba(249, 248, 247, 0) 100%)`,
         }}
       />
-      <S4 />
+      {/* <S4 /> */}
       <S5 />
     </section>
   )
