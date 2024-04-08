@@ -43,7 +43,6 @@ const GroupInfo: React.FC = () => {
                 <Image
                   src="/twitterWithBorder.svg"
                   alt=""
-
                   className=" p-2 translate-y-2"
                 />
               </div>
