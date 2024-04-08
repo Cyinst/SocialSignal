@@ -88,23 +88,42 @@ const GroupNavigation = () => {
         as="p"
         className="tracking-[0.60px] !font-alfaslabone text-shadow-ts"
       >
-        <span className="leading-normal drop-shadow-[0px_4px_8px_#b133ff]  my-16font-peacesans font-peace text-[40px] my-16">
-          Group 
+        <span className="leading-normal drop-shadow-[0px_4px_8px_#b133ff]  my-16font-peacesans font-peace text-[40px] my-16 mr-2">
+          Group
         </span>
-          <span className="leading-normal drop-shadow-[0px_4px_8px_#b133ff]  my-16font-peacesans font-peace text-[40px] my-16">Navigation</span>
+        <span className="leading-normal drop-shadow-[0px_4px_8px_#b133ff]  my-16font-peacesans font-peace text-[40px] my-16">
+          Navigation
+        </span>
       </Text>
       <div className="flex flex-col self-stretch gap-[30px]">
-        <NavigationFilter className="flex flex-col w-[14%] md:w-full gap-[11px]" />
-        <div>
+        <NavigationFilter
+          className="flex flex-col w-[14%] md:w-full gap-[11px]"
+          activeIndex={activeGroupIndex}
+          setActiveIndex={setActiveGroupIndex}
+        />
+        <div key={activeGroupIndex}>
           <div className="justify-center gap-7 grid-cols-[repeat(auto-fill,_minmax(266px_,_1fr))] grid">
-            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
-            <NavigationColumndbbb className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
-            <NavigationColumndbbb className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
-            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
-            <NavigationColumndbbb className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
-            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
-            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
-            <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+            {Array(8)
+              .fill(0)
+              .map((_, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{
+                    opacity: 0,
+                    y: 100,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    delay: idx * 0.1,
+                  }}
+                >
+                  <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+                </motion.div>
+              ))}
           </div>
         </div>
       </div>

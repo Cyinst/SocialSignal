@@ -73,7 +73,7 @@ export default function NavigationColumndbbb({
           </div>
         </div>
       </div>
-      <Link href="//groups/1">
+      <Link href="/groups/1">
         <Button
           size="xl"
           variant="fill"

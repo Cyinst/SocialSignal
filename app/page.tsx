@@ -169,11 +169,11 @@ const S2 = () => {
         key={activeData.title}
         className="flex items-start justify-center flex-wrap md:flex-nowrap mt-10 md:mt-14 max-w-7xl gap-5"
       >
-        <div className="flex-1 px-4 md:px-0">
-          <div className="text-2xl md:text-[40px]  font-bold leading-[48px] text-center md:text-left">
+        <div className="flex-1 px-4 md:px-0 flex flex-col justify-around self-stretch">
+          <div className="text-4xl md:text-[52px]  font-bold leading-[64px] text-center md:text-left">
             {activeData.subTitle}
           </div>
-          <div className="shrink-0 text-slate-400 text-base md:text-xl  font-bold leading-6 mt-4 text-center md:text-left">
+          <div className="shrink-0 text-slate-400 text-base md:text-2xl font-bold leading-7 mt-4 text-center md:text-left">
             {activeData.desc}
           </div>
         </div>
@@ -520,7 +520,7 @@ const s5List = [
 ]
 const S5 = () => {
   return (
-    <div className="flex flex-col justify-start items-center w-full">
+    <div className="flex flex-col justify-start items-center w-full mt-32">
       <h1
         className=" font-peace text-[40px] md:text-6xl  text-center  font-normal leading-[150%] tracking-[0.6px]"
         style={{

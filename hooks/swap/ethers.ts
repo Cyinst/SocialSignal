@@ -49,8 +49,8 @@ export const swap = async (
   }
   const tx = await swapRouter.exactInputSingle(params, {
     from: wallet,
-    gasPrice: ethers.utils.parseUnits("1", "gwei"),
-    gasLimit: 300000,
+    // gasPrice: ethers.utils.parseUnits("1", "gwei"),
+    // gasLimit: 300000,
   })
 
   const recipient = await tx.wait()

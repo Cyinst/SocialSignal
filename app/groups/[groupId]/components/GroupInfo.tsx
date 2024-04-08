@@ -57,7 +57,7 @@ const GroupInfo: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-around items-center pb-1">
+          {/* <div className="flex justify-around items-center pb-1">
             <div className="flex items-center justify-center gap-5">
               <Avatar
                 radius="md"
@@ -69,8 +69,7 @@ const GroupInfo: React.FC = () => {
                 <div>Zhang San </div>
               </div>
             </div>
-            <div className="flex flex-col items-start justify-around"></div>
-          </div>
+          </div> */}
         </div>
         <div className="flex items-start gap-12">
           <div className="flex-2">

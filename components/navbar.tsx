@@ -16,16 +16,6 @@ import NextLink from "next/link"
 import clsx from "clsx"
 import "@rainbow-me/rainbowkit/styles.css"
 import {
-  injectedWallet,
-  metaMaskWallet,
-  walletConnectWallet,
-  uniswapWallet,
-  bitgetWallet,
-  coinbaseWallet,
-  okxWallet,
-} from "@rainbow-me/rainbowkit/wallets"
-
-import {
   TwitterIcon,
   GithubIcon,
   DiscordIcon,
@@ -37,11 +27,14 @@ import { Logo } from "@/components/icons"
 import Image from "next/image"
 import { useScroll } from "ahooks"
 
-import { ConnectButton } from "@rainbow-me/rainbowkit"
+import { ConnectButton, useChainModal } from "@rainbow-me/rainbowkit"
 import { Input } from "@nextui-org/react"
+import { useChainId } from "wagmi"
 
 export const Navbar = () => {
+  // const chainId = useChainId()
   const scroll = useScroll()
+  // const { openChainModal } = useChainModal()
   return (
     <NextUINavbar
       className={clsx(
@@ -85,9 +78,18 @@ export const Navbar = () => {
               </NextLink>
             </NavbarItem>
           ))}
+          <NavbarItem className="text-lg not-italic font-normal leading-[110.6%] tracking-[0.72px] capitalize hover:font-extrabold min-w-[100px] transition-all duration-300 flex justify-center items-center">
+            <NextLink
+              className={clsx(linkStyles({ color: "foreground" }))}
+              color="foreground"
+              href="/groups"
+            >
+              Navigation
+            </NextLink>
+          </NavbarItem>
         </ul>
       </NavbarContent>
-      <NavbarContent
+      {/* <NavbarContent
         className="basis-full hidden md:flex items-center"
         justify="end"
       >
@@ -120,11 +122,22 @@ export const Navbar = () => {
             Join
           </Button>
         </NavbarItem>
-      </NavbarContent>
+      </NavbarContent> */}
 
       <NavbarContent className="hidden sm:flex" justify="end">
-        <NavbarItem className="hidden md:flex">
-          <ConnectButton chainStatus="icon" showBalance={false} />
+        <NavbarItem className="hidden md:flex items-center">
+          {/* {chainId !== 11155111 && (
+            <span className="text-[10px]" onClick={openChainModal}>
+              wrong network
+            </span>
+          )} */}
+          <div className="mx-2">
+            <ConnectButton
+              showBalance={false}
+              chainStatus="none"
+              label="connect wallet"
+            />
+          </div>
         </NavbarItem>
       </NavbarContent>
 
