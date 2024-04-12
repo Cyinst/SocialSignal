@@ -102,8 +102,8 @@ const GroupNavigation = () => {
           setActiveIndex={setActiveGroupIndex}
         />
         <div key={activeGroupIndex}>
-          <div className="justify-center gap-7 grid-cols-[repeat(auto-fill,_minmax(266px_,_1fr))] grid">
-            {Array(8)
+          <div className="justify-center gap-7 grid-cols-[repeat(auto-fill,_minmax(350px_,_1fr))] grid">
+            {Array(6)
               .fill(0)
               .map((_, idx) => (
                 <motion.div

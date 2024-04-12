@@ -100,11 +100,12 @@ const groupData: GroupCardDataType[] = Array(3)
 
 const WeeklySelect: React.FC = () => {
   return (
-    <div className="w-full 3">
+    <div className="w-full 3 max-w-[1278px] mx-auto">
       <div className="font-peace text-[40px] leading-normal drop-shadow-[0px_4px_8px_#b133ff] flex justify-center my-16 ">
         Weekly Select
       </div>
-      <div className="grid grid-cols-3 grid-flow-row gap-8">
+      {/* <div className="grid grid-cols-3 grid-flow-row gap-8"> */}
+        <div className="justify-center gap-7 grid-cols-[repeat(auto-fill,_minmax(380px_,_1fr))] grid">
         {groupData.map((data,idx) => (
           <motion.div
             className="border-gradient-3"
