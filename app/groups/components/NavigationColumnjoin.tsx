@@ -22,7 +22,7 @@ export default function NavigationColumnjoin({
   ...props
 }: Props) {
   const avatarSrc = "images/groupAvatar" + avatarnumber + ".png"
-  const groupNameList = ['Ton Fish', 'Dogecoin', 'VOYA', 'dogwifcoin', 'Pepe', 'Huhu Cat Community', 'Declaration', 'AI PEPE KING']
+  const groupNameList = ['Ton Fish', 'Dogecoin', 'VOYA', 'dogwifcoin', 'Pepe', 'Huhu Cat', 'Declaration', 'AI PEPE KING']
   const groupName = groupNameList[avatarnumber]
   return (
     <div {...props}>

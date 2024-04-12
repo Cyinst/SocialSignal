@@ -81,7 +81,7 @@ const groupDescriptionList = ['Unleashing Memecoin pandemonium.',
   'The book that changed it all',
   'The new sloth on the block.'
 ]
-const kolNameList = ['SS MAX', 'Bomebookofmemes', 'Slerf']
+const kolNameList = ['SS MAX', 'BOME', 'Slerf']
 const groupNameList = ['Social Signal', 'BOME', 'Slerf']
 const groupTypeList = [['Social', 'Meme'], ['Meme'], ['Meme']]
 const groupData: GroupCardDataType[] = Array(3)
