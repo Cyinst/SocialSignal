@@ -3,27 +3,32 @@ import { Button, Text, Img } from "@/components"
 import Link from "next/link"
 
 interface Props {
+  avatarnumber?:number
   className?: string
   socialsignal?: string
-  gamefi?: string
+  type?: string
   lumiterra?: string
   ninetyninethous?: string
   join?: string
 }
 
 export default function NavigationColumnjoin({
+  avatarnumber = 0,
   socialsignal = "Social Signal",
-  gamefi = "GameFi",
+  type = "Meme",
   lumiterra = "Lumiterra",
   ninetyninethous = "99/200",
   join = "+ Join",
   ...props
 }: Props) {
+  const avatarSrc = "images/groupAvatar" + avatarnumber + ".png"
+  const groupNameList = ['Ton Fish', 'Dogecoin', 'VOYA', 'dogwifcoin', 'Pepe', 'Huhu Cat Community', 'Declaration', 'AI PEPE KING']
+  const groupName = groupNameList[avatarnumber]
   return (
     <div {...props}>
       <div className="flex self-stretch items-start gap-5">
         <Img
-          src="images/img_1d2b7b62b9e27af_67x67.png"
+          src={avatarSrc}
           alt="social_signal"
           className="h-[67px] w-[67px] rounded-[50%]"
         />
@@ -33,7 +38,7 @@ export default function NavigationColumnjoin({
             as="p"
             className="tracking-[0.24px] !font-alfaslabone"
           >
-            {socialsignal}
+            {groupName}
           </Text>
           <div className="flex gap-2">
             <Button
@@ -41,7 +46,7 @@ export default function NavigationColumnjoin({
               shape="round"
               className="capitalize border-white-A700_33 border border-solid min-w-[59px] !rounded-md"
             >
-              {gamefi}
+              {type}
             </Button>
             <Button
               variant="fill"

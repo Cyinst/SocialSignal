@@ -28,7 +28,7 @@ const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
       <CardBody>
         <div className="flex gap-5">
           <div className="flex justify-center items-center m-4">
-            <Avatar size="lg" src="/groupAvatar.png" />
+            <Avatar size="lg" src="/groupAvatar1.png" />
           </div>
           <div className="flex flex-col justify-between">
             <div className="font-bold text-[16px] leading-normal">
@@ -71,7 +71,7 @@ const groupCardData: GroupCardDataType[] = Array(8)
   .fill(0)
   .map((_, idx) => ({
     groupId: idx,
-    avatarUrl: "",
+    avatarUrl: "/groupAvatar"+String(idx)+".png",
     groupName: "social signal",
     topics: ["games", "Fi"],
     currentMembersCount: 10,
@@ -121,7 +121,7 @@ const GroupNavigation = () => {
                     delay: idx * 0.1,
                   }}
                 >
-                  <NavigationColumnjoin className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
+                  <NavigationColumnjoin avatarnumber={(idx)} className="flex flex-col w-full gap-[18px] p-4 bg-gray-900_99 rounded-[10px] border border-solid black_900_1a_01_purple_A200_00_border bg-gradient4 shadow-xs" />
                 </motion.div>
               ))}
           </div>

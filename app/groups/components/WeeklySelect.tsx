@@ -11,9 +11,9 @@ import { motion } from "framer-motion"
 import React from "react"
 interface GroupCardDataType {
   groupId: string | number
-  avatarUrl: string
-  coinUrl: string
+  groupAvatar: string
   groupName: string
+  kolAvatar: string
   kolName: string
   topics: string[]
   currentMembersCount: number
@@ -44,7 +44,7 @@ const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
             </div>
             <div className="flex justify-between items-cetner ">
               <div className="flex items-center">
-                <Avatar src="/groupsNavigationAvatar.png" />
+                <Avatar src={data.kolAvatar} />
                 <div className="mx-2">@{data.kolName}</div>
               </div>
               <div className="flex items-center mr-2">
@@ -59,7 +59,7 @@ const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
           <div className="flex w-[30%]  relative overflow-hidden  justify-center items-center ring-2 ring-[#2E2E2E] rounded-md">
             <Image
               removeWrapper
-              src={data.coinUrl}
+              src={data.groupAvatar}
               alt=""
               className="w-full h-auto"
               radius="md"
@@ -77,18 +77,25 @@ const GroupCard: React.FC<{ data: GroupCardDataType }> = ({ data }) => {
   )
 }
 
-const groupData: GroupCardDataType[] = Array(6)
+const groupDescriptionList = ['Unleashing Memecoin pandemonium.',
+  'The book that changed it all',
+  'The new sloth on the block.'
+]
+const kolNameList = ['SS MAX', 'Bomebookofmemes', 'Slerf']
+const groupNameList = ['Social Signal', 'BOME', 'Slerf']
+const groupTypeList = [['Social', 'Meme'], ['Meme'], ['Meme']]
+const groupData: GroupCardDataType[] = Array(3)
   .fill(0)
   .map((_, idx) => ({
     groupId: idx,
-    groupName: "Social Signal",
-    avatarUrl: "",
-    coinUrl: "/pure_logo.svg",
-    kolName: "zhangsan",
-    topics: ["Games", "BTC"],
+    groupName: groupNameList[idx],
+    groupAvatar: "/groupAvatar"+idx+".png",
+    kolAvatar: "/kolAvatar" + idx + ".png",
+    kolName: kolNameList[idx],
+    topics: groupTypeList[idx],
     currentMembersCount: 9,
     memberLimit: 15,
-    description: "this is a long long description",
+    description: groupDescriptionList[idx],
   }))
 
 const WeeklySelect: React.FC = () => {
