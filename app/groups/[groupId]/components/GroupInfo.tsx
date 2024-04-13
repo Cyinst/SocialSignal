@@ -1,5 +1,6 @@
 import React from "react"
 import { Avatar, Button, Chip, Image } from "@nextui-org/react"
+import NextLink from "next/link"
 
 interface GroupInfoDataType {
   groupName: string
@@ -31,13 +32,15 @@ const GroupInfo: React.FC = () => {
             </div>
             <div className="flex items-end justify-center p-1">
               <div className="">
-                <Button
-                  startContent={"+"}
-                  className="p-2 mr-3 bg-[#6119AB]"
-                  size="lg"                
-                >
-                  join 
-                </Button>
+                <NextLink target="_blank" href="https://t.me/+tUVTFP3zEdMxZGVl">
+                  <Button
+                    startContent={"+"}
+                    className="p-2 mr-3 bg-[#6119AB]"
+                    size="lg"
+                  >
+                    join
+                  </Button>
+                </NextLink>
               </div>
               <div>
                 <Image
@@ -72,7 +75,7 @@ const GroupInfo: React.FC = () => {
         </div>
         <div className="flex items-start gap-12">
           <div className="flex-2">
-            <div className="text-[40px] font-bold mb-2">Group Name</div>
+            <div className="text-[40px] font-bold mb-2">SocialSignal</div>
             <div className=" min-w-[400px] max-w-[600px] text-ellipsis overflow-hidden">
               our slogan is to make the world a better place! our slogan is to
               make the world a better place
